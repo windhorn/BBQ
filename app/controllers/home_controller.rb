@@ -2,16 +2,9 @@ class HomeController < ApplicationController
   before_action :authenticate_user!
   def index
     unless Permit.where(name: current_user.name).first
-      # TODO: 
+      flash[:notice] = '登録されていないユーザです．'
+    else
+      @price = current_user.price
     end
-
-
-    @price = current_user.price
-  end
-
-
-private
-  def permit_user!
-
   end
 end

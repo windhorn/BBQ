@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'sqlite3'
@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'byebug'
